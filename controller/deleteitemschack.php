@@ -5,14 +5,14 @@ if (isset($_REQUEST['delete'])) {
 
     echo $id;
 
-    $fc = file("Productdata.txt");
+    $fc = file("../view/Productdata.txt");
 
-    $f = fopen("Productdata.txt", "w");
+    $f = fopen("../view/Productdata.txt", "w");
 
     foreach ($fc as $line) {
         if (!strstr($line, $id))
             fputs($f, $line);
     }
     fclose($f);
-    header("Location:deleteitems.php");
+    header("Location:../view/deleteitems.php");
 }

@@ -5,14 +5,14 @@ if (isset($_REQUEST['delete'])) {
 
     echo $id;
 
-    $fc = file("blogpsots.txt");
+    $fc = file("../view/blogpsots.txt");
 
-    $f = fopen("blogpsots.txt", "w");
+    $f = fopen("../view/blogpsots.txt", "w");
 
     foreach ($fc as $line) {
         if (!strstr($line, $id))
             fputs($f, $line);
     }
     fclose($f);
-    header("Location:deletblogs.php");
+    header("Location:../view/deletblogs.php");
 }

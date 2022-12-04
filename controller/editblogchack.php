@@ -8,10 +8,10 @@ if (isset($_REQUEST['update'])) {
     $newtext = $_REQUEST['bloger_name'];
 
 
-    $str = file_get_contents('blogpsots.txt');
+    $str = file_get_contents('../view/blogpsots.txt');
 
     $str = str_replace($lookfor, $newtext, $str);
 
-    file_put_contents('blogpsots.txt', $str);
-    header("Location:editblogs.php");
+    file_put_contents('../view/blogpsots.txt', $str);
+    header("Location:../view/editblogs.php");
 }

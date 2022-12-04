@@ -23,7 +23,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/test.png"alt="Nature" width="100" height="100"> 
+                <img src="../pictures/test.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>Delete products </h1></td>
             
@@ -33,7 +33,7 @@ if (isset($_COOKIE['status'])) {
             <td rowspan="3">
                 <h1>menu</h1>
                 <ul>
-                <li><a href="../HTML/sellerhomepage.php">Home</a></li>
+                <li><a href="../views/sellerhomepage.php">Home</a></li>
                   <li><a href="">Profile.</a></li>
                   <li><a href="">Settings.</a></li>
                   <li><a href="">History.</a></li>
@@ -44,13 +44,13 @@ if (isset($_COOKIE['status'])) {
                 </ul>  
             </td>
             <td calspan="4">
-            <form name="form2" action="deleteitemschack.php" method="POST">
+            <form name="form2" action="../controller/deleteitemschack.php" method="POST">
             <fieldset>
                 <legend>Items list</legend>
                 <table>
                     <?php
 
-                    $display = file("Productdata.txt");
+                    $display = file("../view/Productdata.txt");
                     for ($i = 0; $i <= count($display) - 1; $i++) {
 
                         $lines = explode("|", $display[$i]);
@@ -78,7 +78,7 @@ if (isset($_COOKIE['status'])) {
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\logout.php"> logout</a></h4>
+            <h4><a href="..\controller\logout.php"> logout</a></h4>
             </td>
 
         </tr>

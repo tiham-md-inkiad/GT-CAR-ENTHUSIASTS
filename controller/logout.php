@@ -3,5 +3,5 @@
 session_start();
 session_destroy();
 setcookie('status', 'true', time() - 100, '/');
-header('location: welcomepage.html');
+header('location: ../view/welcomepage.html');
 ?>

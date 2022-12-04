@@ -5,14 +5,14 @@ if (isset($_REQUEST['delete'])) {
 
     echo $id;
 
-    $fc = file("Servicedata.txt");
+    $fc = file("../view/Servicedata.txt");
 
-    $f = fopen("Servicedata.txt", "w");
+    $f = fopen("../view/Servicedata.txt", "w");
 
     foreach ($fc as $line) {
         if (!strstr($line, $id))
             fputs($f, $line);
     }
     fclose($f);
-    header("Location:deleteservices.php");
+    header("Location:../view/deleteservices.php");
 }
