@@ -8,7 +8,7 @@ if (isset($_REQUEST['submit'])) {
     if ($adminname == null || $adminpassword == null) {
         echo "null adminname/adminpassword";
     } else {
-        $file = fopen('adminlogindata.txt','r');
+        $file = fopen('../view/adminlogindata.txt','r');
 
         while (!feof($file)) {
             $data = fgets($file);
@@ -16,7 +16,7 @@ if (isset($_REQUEST['submit'])) {
             if ($adminname == trim($user[1]) && $adminpassword == trim($user[2])) {
                 $_SESSION['status'] = true;
                 setcookie('status', 'true', time() + 3600, '/');
-                header('location: adminhomepage.php');
+                header('location: ../view/adminhomepage.php');
             }
         }
         echo "invalid user";

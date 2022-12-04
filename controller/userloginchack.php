@@ -8,7 +8,7 @@ if (isset($_REQUEST['submit'])) {
     if ($username == null || $password == null) {
         echo "null username/password";
     } else {
-        $file = fopen('userlogindata.txt','r');
+        $file = fopen('../view/userlogindata.txt','r');
 
         while (!feof($file)) {
             $data = fgets($file);
@@ -16,7 +16,7 @@ if (isset($_REQUEST['submit'])) {
             if ($username == trim($user[1]) && $password == trim($user[2])) {
                 $_SESSION['status'] = true;
                 setcookie('status', 'true', time() + 3600, '/');
-                header('location: userhomepage.php');
+                header('location: ../view/userhomepage.php');
             }
         }
         echo "invalid user";

@@ -23,7 +23,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/social-media.png"alt="Nature" width="100" height="100"> 
+                <img src="../pictures/social-media.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>Seller home page</h1></td>
             
@@ -41,19 +41,19 @@ if (isset($_COOKIE['status'])) {
                   
                 </ul>  
             </td>
-            <td align="center"><a href="../HTML/additems.php"><h1>Add new items</h1></a></td>
+            <td align="center"><a href="../view/additems.php"><h1>Add new items</h1></a></td>
             <td align="center"><a href=""><h1>Edit items</h1></a></td>
             
         </tr>
         <tr>
-            <td align="center"><a href="../HTML/deleteitems.php"><h1>Delete items</h1></a></td>
-            <td align="center"><a href="../HTML/Productlist.php"><h1>Items list</h1></a></td>
+            <td align="center"><a href="../view/deleteitems.php"><h1>Delete items</h1></a></td>
+            <td align="center"><a href="../view/Productlist.php"><h1>Items list</h1></a></td>
         </tr>
        
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\logout.php"> logout</a></h4>
+            <h4><a href="..\controller\logout.php"> logout</a></h4>
             </td>
 
         </tr>

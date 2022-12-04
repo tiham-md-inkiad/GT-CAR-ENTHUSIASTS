@@ -2,8 +2,8 @@
 session_start();
 if (isset($_COOKIE['status'])) {
     ?>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE view>
+<view>
 
 <head>
 
@@ -22,7 +22,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/service.png"alt="Nature" width="100" height="100"> 
+                <img src="../pistures/service.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>Technicians home page</h1></td>
             
@@ -39,19 +39,19 @@ if (isset($_COOKIE['status'])) {
                   
                 </ul>  
             </td>
-            <td align="center"><a href="../HTML/addservice.php"><h1>Add new Service</h1></a></td>
+            <td align="center"><a href="../view/addservice.php"><h1>Add new Service</h1></a></td>
             <td align="center"><a href=""><h1>Edit Services</h1></a></td>
             
         </tr>
         <tr>
-            <td align="center"><a href="../HTML/deleteservices.php"><h1>Delete Services</h1></a></td>
-            <td align="center"><a href="../HTML/servicelist.php"><h1>Services list</h1></a></td>
+            <td align="center"><a href="../view/deleteservices.php"><h1>Delete Services</h1></a></td>
+            <td align="center"><a href="../view/servicelist.php"><h1>Services list</h1></a></td>
         </tr>
        
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\logout.php"> logout</a></h4>
+            <h4><a href="..\controller\logout.php"> logout</a></h4>
             </td>
 
         </tr>
@@ -70,7 +70,7 @@ if (isset($_COOKIE['status'])) {
 
 </body>
 
-</html>
+</view>
 <?php
 } else {
     echo "invalid request";

@@ -33,7 +33,7 @@ if (isset($_COOKIE['status'])) {
             <td rowspan="3">
                 <h1>menu</h1>
                 <ul>
-                <li><a href="../HTML/technicianhomepage.php">Home</a></li>
+                <li><a href="../view/technicianhomepage.php">Home</a></li>
                   <li><a href="">Profile.</a></li>
                   <li><a href="">Settings.</a></li>
                   <li><a href="">History.</a></li>
@@ -44,7 +44,7 @@ if (isset($_COOKIE['status'])) {
                 </ul>  
             </td>
             <td calspan="4">
-            <form name="form2" action="deleteserviceschack.php" method="POST">
+            <form name="form2" action="../controller/deleteserviceschack.php" method="POST">
             <fieldset>
                 <legend> Services list</legend>
                 <table>
@@ -78,7 +78,7 @@ if (isset($_COOKIE['status'])) {
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\logout.php"> logout</a></h4>
+            <h4><a href="..\controller\logout.php"> logout</a></h4>
             </td>
 
         </tr>

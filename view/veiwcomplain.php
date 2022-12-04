@@ -23,7 +23,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/test.png"alt="Nature" width="100" height="100"> 
+                <img src="../pictures/test.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>complain lists</h1></td>
             
@@ -33,7 +33,7 @@ if (isset($_COOKIE['status'])) {
             <td rowspan="3">
                 <h1>menu</h1>
                 <ul>
-                <li><a href="../HTML/adminhomepage.php">Home</a></li>
+                <li><a href="../view/adminhomepage.php">Home</a></li>
                   <li><a href="">Profile.</a></li>
                   <li><a href="">Settings.</a></li>
                   <li><a href="">History.</a></li>
@@ -50,7 +50,7 @@ if (isset($_COOKIE['status'])) {
                 <table>
                     <?php
 
-                    $display = file("complaindata.txt");
+                    $display = file("../view/complaindata.txt");
                     for ($i = 0; $i <= count($display) - 1; $i++) {
 
                         $lines = explode("|", $display[$i]);
@@ -79,7 +79,7 @@ if (isset($_COOKIE['status'])) {
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\adminlogout.php"> logout</a></h4>
+            <h4><a href="..\controller\adminlogout.php"> logout</a></h4>
             </td>
 
         </tr>

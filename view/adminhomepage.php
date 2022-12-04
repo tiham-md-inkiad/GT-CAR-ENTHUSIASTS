@@ -41,20 +41,20 @@ if (isset($_COOKIE['status'])) {
                   
                 </ul>  
             </td>
-            <td align="center"><a href="../HTML/adminbloglistdelete.php"><h1>Bloger</h1></a></td>
-            <td align="center"><a href="../HTML/adminseller.php"><h1>Sellers</h1></a></td>
+            <td align="center"><a href="../view//adminbloglistdelete.php"><h1>Bloger</h1></a></td>
+            <td align="center"><a href="../view//adminseller.php"><h1>Sellers</h1></a></td>
             
         </tr>
         <tr>
-            <td align="center"><a href="../HTML/adminserviceslist.php"><h1>technicians</h1></a></td>
-            <td align="center"><a href="../HTML/veiwcomplain.php"><h1>User complain list</h1></a></td>
+            <td align="center"><a href="../view//adminserviceslist.php"><h1>technicians</h1></a></td>
+            <td align="center"><a href="../view//veiwcomplain.php"><h1>User complain list</h1></a></td>
         </tr>
         
        
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\adminlogout.php"> logout</a></h4>
+            <h4><a href="..\controller\adminlogout.php"> logout</a></h4>
             </td>
 
         </tr>

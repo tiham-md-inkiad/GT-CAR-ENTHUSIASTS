@@ -23,7 +23,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/social-media.png"alt="Nature" width="100" height="100"> 
+                <img src="../pictures/social-media.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>User home page</h1></td>
             
@@ -41,20 +41,20 @@ if (isset($_COOKIE['status'])) {
                   
                 </ul>  
             </td>
-            <td align="center"><a href="../HTML/blogposts.php"><h1>Blogs</h1></a></td>
-            <td align="center"><a href="../HTML/shop.php"><h1>Shops</h1></a></td>
+            <td align="center"><a href="../view/blogposts.php"><h1>Blogs</h1></a></td>
+            <td align="center"><a href="../view/shop.php"><h1>Shops</h1></a></td>
             
         </tr>
         <tr>
-            <td align="center"><a href="../HTML/services.php"><h1>Services</h1></a></td>
-            <td align="center"><a href="../HTML/customercare.php"><h1>Coustomer care</h1></a></td>
+            <td align="center"><a href="../view/services.php"><h1>Services</h1></a></td>
+            <td align="center"><a href="../view/customercare.php"><h1>Coustomer care</h1></a></td>
         </tr>
         
        
         <tr align="center">
         
             <td colspan="3">
-            <h4><a href="..\HTML\logout.php"> logout</a></h4>
+            <h4><a href="..\controller\logout.php"> logout</a></h4>
             </td>
 
         </tr>
