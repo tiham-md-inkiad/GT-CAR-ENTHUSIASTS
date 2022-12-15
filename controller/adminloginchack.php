@@ -1,25 +1,26 @@
 <?php
 session_start();
+require_once('../model/database.php');
+require_once('../model/admin.php');
 
-$adminname = $_POST['adminname'];
-$adminpassword = $_POST['adminpassword'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-if (isset($_REQUEST['submit'])) {
-    if ($adminname == null || $adminpassword == null) {
-        echo "null adminname/adminpassword";
-    } else {
-        $file = fopen('../view/adminlogindata.txt','r');
 
-        while (!feof($file)) {
-            $data = fgets($file);
-            $user = explode('|', $data);
-            if ($adminname == trim($user[1]) && $adminpassword == trim($user[2])) {
-                $_SESSION['status'] = true;
-                setcookie('status', 'true', time() + 3600, '/');
-                header('location: ../view/adminhomepage.php');
-            }
-        }
+if($email == null || $password == null){
+    echo "null username/password";
+}else{
+
+    $status = loginCheck($email, $password);
+
+    if($status){
+        $_SESSION['email'] = $email;
+        $_SESSION['loggedin'] = true;
+        
+        header('location: ../view/adminhomepage.php');
+    }else{
         echo "invalid user";
     }
+    
 }
 ?>

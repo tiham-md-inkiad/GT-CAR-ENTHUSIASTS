@@ -1,7 +1,9 @@
 <?php
 session_start();
-if (isset($_COOKIE['status'])) {
-    ?>
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+
+    
+?>
 <!DOCTYPE html>
 
 <html>
@@ -23,7 +25,7 @@ if (isset($_COOKIE['status'])) {
         </tr>
         <tr>
             <td>
-                <img src="../Image/unauthorized-person.png"alt="Nature" width="100" height="100"> 
+                <img src="../pictures/unauthorized-person.png"alt="Nature" width="100" height="100"> 
             </td>
             <td colspan="3" align="center"><h1>Admin home page</h1></td>
             
@@ -76,8 +78,6 @@ if (isset($_COOKIE['status'])) {
 </html>
 <?php
 } else {
-    echo "invalid request";
-    echo "<br>";
-    echo "please login first";
+    echo "Please log in first to see this page.";
 }
 ?>
