@@ -1,7 +1,8 @@
 <?php
 session_start();
-if (isset($_COOKIE['status'])) {
-    ?>
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -76,8 +77,6 @@ if (isset($_COOKIE['status'])) {
 </html>
 <?php
 } else {
-    echo "invalid request";
-    echo "<br>";
-    echo "please login first";
+    echo "Please log in first to see this page.";
 }
 ?>

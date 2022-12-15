@@ -1,58 +1,41 @@
-<html>
+
+<!DOCTYPE htmL>
+<html Lang="en">
 
 <head>
-    <title>Admin Login</title>
+    <meta charset="UTF-8">
+    <title>Admin Login page</title>
+    <link rel="stylesheet" href="../asset/loginstyle.css">
+    
 </head>
 
 <body>
-    <form method="post" action="../controller/adminloginchack.php">
-        <table border="1" align="center" width="30%">
-            <tr align="center">
-                <td colspan="2">
-                    <img src="../pictures/manager.png" alt="Nature" width="100" height="100">
-                </td>
+    <form  action="../controller/adminloginchack.php" method="post">
+        <div class="box">
+            <div class="form">
+                <h2>Admin Login Page</h2>
+                <div class="inputBox">
+                    <input type="text" name="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="Password" name="password" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                
+                <br>
+                <input type="submit" name="submit" value="Login">
+                <div class="links">
+                    <a href="../view/forgetpassword.html">Forget Password</a>
+                    <a href="../view/registationmain.html">Ragistation</a>
+                </div>
+                <div class="links"><a href="../view/welcomepage.html">Back to welcomepage</a></div>
+                
 
-            </tr>
-            <tr align="center">
-                <td colspan="2">
-                    <h3> Admin Login Page </h3>
-                </td>
-
-            </tr>
-            <tr>
-                <td>Admin name</td>
-                <td><input type="text" name="adminname" value="" /></td>
-
-
-            </tr>
-
-            <tr>
-                <td>Password:</td>
-                <td> <input type="password" name="adminpassword" value="" /> <br>
-
-            </tr>
-
-
-
-            <tr>
-
-                <td>
-                    <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember
-                        me</label>
-                </td>
-                <td>
-                    <input type="submit" name="submit" value="Submit">
-                </td>
-
-            </tr>
-            <tr align="center">
-
-                <td colspan="2">
-                    <h4><a href="../view/forgetadminpassword.html"> forget password</a></h4>
-                </td>
-
-            </tr>
-        </table>
+            </div>
+        </div>
     </form>
 </body>
 
