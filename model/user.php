@@ -1,10 +1,10 @@
 <?php
 	require_once('database.php');
-function InsertUser( $name, $email, $password)
+function InsertUser( $id,$username,$email,$password,$gender,$date_of_birth)
 {
     $con = getConnection();
 
-        $sql="INSERT INTO users( username, email,password) VALUES('$name','$email','$password')";
+        $sql="INSERT INTO users( id, username, email, password, gender, date_of_birth ) VALUES('$id','$username','$email','$password','$gender','$date_of_birth')";
 		if(mysqli_query($con, $sql)){
 			return true;
 		}else{
