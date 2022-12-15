@@ -1,4 +1,0 @@
-001|Tiham|123|inkiadinul@gmail.com|tihams shop|bodyparts|014546
-002|Tiham|1234|inkiadinul@gmail.com|tihams shop|bodyparts|0145464
-003|tiham inkiad|12534|inkiadinul@gmail.com|tihams shop|engineparts|01454646
-001|tiham|123456|inkiadinul@gmail.com|tihams shop|bodyparts|014546
