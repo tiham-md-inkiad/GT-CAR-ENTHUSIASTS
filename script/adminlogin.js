@@ -11,7 +11,7 @@ function validateEmail() {
       return ;
     }
   }
-  
+   
   function validatePassword() {
       var password = document.getElementById('password').value;
       if(password == null || password == undefined || password == '') {
@@ -22,6 +22,6 @@ function validateEmail() {
       if(password.length < 4) {
         alert('Password should be at least 4 characters long');
         return;
-      }
     }
+}
     
