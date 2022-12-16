@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Admin Login page</title>
     <link rel="stylesheet" href="../asset/loginstyle.css">
+    <script src="../script/adminlogin.js"></script>
     
 </head>
 
@@ -15,12 +16,12 @@
             <div class="form">
                 <h2>Admin Login Page</h2>
                 <div class="inputBox">
-                    <input type="text" name="email" required="required">
+                    <input type="email" id="email" name="email" value="" onblur="validateEmail()" required>
                     <span>Email</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="Password" name="password" required="required">
+                    <input type="password" id="password" name="password" value="" onblur="validatePassword()" required>
                     <span>Password</span>
                     <i></i>
                 </div>
