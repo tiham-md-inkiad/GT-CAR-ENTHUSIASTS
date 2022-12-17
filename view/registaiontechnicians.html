@@ -1,103 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Technician registation</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/registationstyle.css">
+    <script src="../script/registaiontechnicians.js"></script>
+    <title>Technician registaion</title>
 </head>
 
 <body>
+    <div class="registation">
+        <form action="#" method="post" action="../controller/registationsellerchack.php">
+            <h2> Resister as a Technician</h2>
+            <div class="input-style">
+                <label for="ID">Technician id:</label>
+                <input type="number" name="ID" placeholder="ID" id="id" onblur="validateid()">
 
-    <form method="post" action="../controller/registaiontechnicianschack.php">
+                <label for="username">Technicianname</label>
+                <input type="text" name="username" placeholder="bloger name " id="username" onblur="validateName()">
 
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="password" id="password" onblur="validatePassword()">
 
-        <table border="1" align="center" width="30%">
-            <tr align="center">
-                <td colspan="2">
-                    <img src="../pictures/technician.png" alt="Nature" width="100" height="100">
-                </td>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="email" id="email" onblur="validateEmail()">
 
-            </tr>
-            <tr align="center">
-                <td colspan="2">
-                    <h1>Resister as a Technician</h1>
-                </td>
+                <label for="shopname">Technician Shop name</label>
+                <input type="text" name="shopname" placeholder="shop name " id="shopname" onblur="validateShopName()">
 
-            </tr>
-            <tr>
-                <td>id</td>
-                <td><input type="text" name="id" value=""></td>
+                <label for="Tradelicencenumber">Trade licence number:</label>
+                <input type="text" name="Tradelicencenumber" placeholder="Trade licence number" id="Tradelicencenumber" onblur="validatetln()">
 
-
-            </tr>
-            <tr>
-                <td>Username</td>
-                <td rowspan="1"><input type="text" name="username" value="" placeholder="Name" /></td>
-
-
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td rowspan="1"> <input type="password" name="password" value="" /> <br>
-
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td rowspan="1"><input type="email" name="email" value="" placeholder="Email" /></td>
-
-
-            </tr>
-
-
-            <tr>
-                <td>Shop name:</td>
-                <td rowspan="1"><input type="text" name="shopname" value="" placeholder="Shop Name" /></td>
-
-            </tr>
-            <tr>
-                <td>Service type</td>
-                <td rowspan="1"> <select name="Servicetype">
-                        <option value="electrical">Electrical</option>
+                <label for="dob">Date of birth:</label>
+                <input type="date" name="dob" value="" id="dob" onblur="validateDob()" />
+                <label for="blogertype">Service type</label>
+                <select name="blogertype" id="blogertype" class="blogertype">
+                    <option value="electrical">Electrical</option>
                         <option value="body_work">Body work</option>
                         <option value="engine_work">Engine work</option>
                         <option value="ac_wrok">Ac work</option>
                         <option value="all">All</option>
-                    </select>
-                </td>
+                </select>
 
-            </tr>
+            </div>
 
+            <div class="register-page">
+                <input type="submit" value="Register">
+                <input type="submit" id="reset" name="reset" value="Reset" onblur="resetRegistration()">
+            </div>
 
-            <tr>
-                <td>Trade licence number</td>
-                <td colspan="2"><input type="text" name="Tradelicencenumber" value="" /></td>
-
-            </tr>
-            <tr>
-                <td>Trade licence pdf</td>
-                <td colspan="2"><input type="file" name="Tradelicencenumber" value="" /></td>
-
-            </tr>
-            <tr align="right">
-
-                <td colspan="3">
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="reset" name="" value="Reset">
-                </td>
-
-            </tr>
-            <tr align="center">
-
-                <td colspan="3">
-                    <h4><a href="../view/technicianlogin.html"> back to login page</a></h4>
-                </td>
-
-            </tr>
-
-
-        </table>
-    </form>
+            <div class="links"><a href="../view/technicianlogin.html">Back to technician login page</a></div>
+        </form>
+    </div>
 
 </body>
 
