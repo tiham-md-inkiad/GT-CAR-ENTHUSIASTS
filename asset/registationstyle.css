@@ -1,0 +1,107 @@
+  *{
+   margin: 0px;
+   padding: 0px; 
+  }
+
+  body{
+    background-image: url(../pictures/car.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .registation{
+    width: 330PX;
+    height: 600PX;
+    padding: 30PX;
+    border: 5px solid #34495e;
+    border-radius: 10px;
+    outline: none;
+    background:rgba(52,73,94,1);
+    opacity: 80%;
+  }
+
+form h2 {
+    color: antiquewhite;
+    justify-content: center;
+  }
+.input-style{
+    margin-top: 15px;
+  }
+.input-style input{
+    width: 90%;
+    background: transparent;
+    padding: 2px solid #6e0581;
+    border-radius: 5px;
+    color: antiquewhite;
+    outline: none;
+    height: 15px;
+    margin-bottom: 10px;
+  }
+  .input-style label{
+   color: antiquewhite;
+   margin-bottom: 4px;
+   display: block;
+   font-size: 15px;
+   cursor: pointer;
+   padding: 1px;
+  }
+  .blogertype{
+    width: 90%;
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    border: none;
+
+  }
+  .gender p{
+    color: antiquewhite;
+    margin-top: 4px;
+  }
+
+ .option{
+    margin-top: 6px;
+  }
+  .option label{
+    color: antiquewhite;
+  }
+  .register-page input{
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: linear-gradient(130deg, #dfb4e7, #9342a1);
+    outline: none;
+    border-radius: 5px;
+    color: antiquewhite;
+    cursor: pointer;
+    border: none;
+  }
+  .register-page input:hover{
+    background: linear-gradient(-130deg, #dfb4e7, #9342a1);
+
+}
+.links
+{
+    display: flex;
+    justify-content:space-around;
+    
+    
+}
+.links a
+{
+    margin: 10px 0;
+    font-size: 1em;
+    color:  #9342a1;
+    text-decoration: none;
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: antiquewhite;
+}

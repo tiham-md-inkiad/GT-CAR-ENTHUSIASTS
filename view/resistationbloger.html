@@ -1,101 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Bloger registaion</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/registationstyle.css">
+    <script src="../script/resistationbloger.js"></script>
+    <title>bloger registaion</title>
 </head>
 
 <body>
+    <div class="registation">
+        <form action="#" method="post"action="../controller/registationblogerchack.php">
+            <h2>Bloger Registation</h2>
+            <div class="input-style">
+                <label for="ID">Bloger id:</label>
+                <input type="number" name="ID" placeholder="ID" id="id" onblur="validateid()">
 
-    <form method="post" action="../controller/registationblogerchack.php">
+                <label for="username">Bloger name</label>
+                <input type="text" name="username" placeholder="bloger name " id="username" onblur="validateName()">
 
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="password" id="password" onblur="validatePassword()">
 
-    <table border="1" align="center" width="50%">
-        <tr align="center">
-            <td colspan="2">
-                <img src="../pictures/blogger.png"alt="Nature" width="100" height="100">
-            </td>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="email" id="email" onblur="validateEmail()">
 
-        </tr>
-        <tr align="center">
-            <td colspan="3">
-                <h1>Resister as a Bloger</h1>
-            </td>
-
-        </tr>
-        <tr>
-            <td>id</td>
-            <td><input type="text" name="id" value=""></td>
-
-
-        </tr>
-        <tr>
-            <td>Username</td>
-            <td rowspan="1"><input type="text" name="username" value="" placeholder="Name" /></td>
-            
-
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td rowspan="1"><input type="email" name="email" value="" placeholder="Email" /></td>
-            
-
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td rowspan="1"> <input type="password" name="password" value=""/> <br>
-            
-        </tr>
-        <tr>
-            <td>Gender</td>
-            <td rowspan="1"> <input type="radio" name="gender" value="" /> Male
-                <input type="radio" name="gender" value="" /> Female
-                <input type="radio" name="gender" value="" /> Other </td>
-            
-        </tr>
-
-        </tr>
-        <tr>
-            <td>Date of Birth</tdd>
-            <td rowspan="1"> <input type="date" name="dob" value="" /></td>
-            
-        </tr>
-       
-        <tr>
-            <td>Bloger type</td>
-            <td rowspan="1"> <select name="blogertype">
+             
+                <label for="dob">Date of birth:</label>
+                <input type="date" name="dob" value=""id="dob" onblur="validateDob()"/>
+                <label for="blogertype">Bloger type</label>  
+                <select name="blogertype" id="blogertype" class="blogertype">
                     <option value="decoration">Decoration</option>
                     <option value="bodyparts">Bodyparts</option>
                     <option value="engineparts">Engineparts</option>
                 </select>
-            </td>
+
+            </div>
+            <div class="gender">
+                <p>Gender</p>
+                <div class="option">
+
+                    <input type="radio" name="nm" id="gm"required />
+                    <label for="gm">Male</label>
+
+                    <input type="radio" name="nm" id="gf" />
+                    <label for="gf">female</label>
+
+                    <input type="radio" name="nm" id="go" />
+                    <label for="go">others</label>
+                </div>
+
+            </div>
             
-        </tr>
-        
-       
-       
-        
-      
-        <tr align="right">
-            <td colspan="3">
-                <input type="submit" name="submit" value="Submit">
-                <input type="reset" name="" value="Reset">
-            </td>
 
-        </tr>
-        <tr align="center">
-        
-            <td colspan="3">
-                <h4><a href="../view/blogerlogin.html"> back to login page</a></h4>
-            </td>
+            <div class="register-page">
+                <input type="submit" value="Register">
+                <input type="submit" id="reset" name="reset" value="Reset" onblur="resetRegistration()">
+            </div>
+           
+            <div class="links"><a href="../view/blogerlogin.html">Back to bloger login page</a></div>
+        </form>
+    </div>
 
-        </tr>
-
-
-    </table>
- </form>
 </body>
 
 </html>

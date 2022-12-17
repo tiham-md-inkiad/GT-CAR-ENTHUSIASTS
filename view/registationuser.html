@@ -1,94 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>User registation</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/userreg.css">
+    <script src="../script/registationuser.js"></script>
+    <title>User registaion</title>
 </head>
 
 <body>
+    <div class="registation">
+        <form action="#" method="post"action="../controller/registationuserchack.php">
+            <h2>User Registation</h2>
+            <div class="input-style">
+                <label for="ID">User id</label>
+                <input type="number" name="ID" placeholder="ID" id="id" onblur="validateid()">
 
-    <form method="post" action="../controller/registationuserchack.php">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="username " id="username" onblur="validateName()">
 
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="password" id="password" onblur="validatePassword()">
 
-    <table border="1" align="center" width="50%">
-        <tr align="center">
-            <td colspan="2">
-                <img src="../pictures/user.png" alt="Nature" width="100" height="100">
-            </td>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email" id="email" onblur="validateEmail()">
 
-        </tr>
-      
-        <tr align="center">
-            <td colspan="2">
-                <h1>Resister as a User</h1>
-            </td>
+             
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" value=""id="dob" onblur="validateDob()"/>
+            </div>
+            <div class="gender">
+                <p>Gender</p>
+                <div class="option">
 
-        </tr>
-        <tr>
-            <td> id</td>
-            <td><input type="text" name="id" value=""></td>
+                    <input type="radio" name="nm" id="gm"required />
+                    <label for="gm">Male</label>
 
+                    <input type="radio" name="nm" id="gf" />
+                    <label for="gf">female</label>
 
-        </tr>
-        <tr>
-            <td>Username</td>
-            <td rowspan="1"><input type="text" name="username" value="" placeholder="Name" /></td>
+                    <input type="radio" name="nm" id="go" />
+                    <label for="go">others</label>
+                </div>
+
+            </div>
             
 
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td rowspan="1"> <input type="password" name="password" value="password"/> <br>
-            
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td rowspan="1"><input type="email" name="" value="" placeholder="Email" /></td>
-            
-
-        </tr>
-       
-        <tr>
-            <td>Gender</td>
-            <td rowspan="1"> <input type="radio" name="gender" value="" /> Male
-                <input type="radio" name="gender" value="" /> Female
-                <input type="radio" name="gender" value="" /> Other </td>
-            
-        </tr>
-
-        </tr>
-        <tr>
-            <td>Date of Birth</tdd>
-            <td rowspan="1"> <input type="date" name="" value="" /></td>
-            
-        </tr>
-       
-        
-        <tr>
-            <td>Profile picture </td>
-            <td colspan="2"><input type="file" name="profile" value="" /></td>
-
-        </tr>
-       
-        <tr align="right">
-            <td colspan="3">
-                <input type="submit" name="submit" value="Submit">
-                <input type="reset" name="" value="Reset">
-            </td>
-
-        </tr>
-        <tr align="center">
-        
-            <td colspan="3">
-                <h4><a href="../view/userlogin.html"> back to login page</a></h4>
-            </td>
-
-        </tr>
-
-
-    </table>
+            <div class="register-page">
+                <input type="submit" value="Register">
+                <input type="submit" id="reset" name="reset" value="Reset" onblur="resetRegistration()">
+            </div>
+           
+            <div class="links"><a href="../view/userlogin.html">Back to userlogin page</a></div>
+        </form>
+    </div>
 
 </body>
 
