@@ -11,11 +11,11 @@ function validateid() {
 }
 function validateName() {
     var username = document.getElementById('username').value;
-    if(nusername == null || username == undefined ||username == '') {
+    if(username == null || username == undefined ||username == '') {
       alert('User Name is required');
       return;
     }
-    if(nusername.length < 2) {
+    if(username.length < 2) {
       alert('Name should be at least 2 characters long');
       return;
     }
