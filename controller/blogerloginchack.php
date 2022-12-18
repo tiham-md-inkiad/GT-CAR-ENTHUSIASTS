@@ -1,25 +1,26 @@
 <?php
 session_start();
+require_once('../model/database.php');
+require_once('../model/blogerlogin.php');
 
-$username = $_POST['username'];
+$email = $_POST['email'];
 $password = $_POST['password'];
+// print_r($email);
 
-if (isset($_REQUEST['submit'])) {
-    if ($username == null || $password == null) {
-        echo "null username/password";
-    } else {
-        $file = fopen('../view/blogerlogindata.txt','r');
+if($email == null || $password == null){
+    echo "null username/password";
+}else{
 
-        while (!feof($file)) {
-            $data = fgets($file);
-            $user = explode('|', $data);
-            if ($username == trim($user[1]) && $password == trim($user[2])) {
-                $_SESSION['status'] = true;
-                setcookie('status', 'true', time() + 3600, '/');
-                header('location: ../view/blogerhomepage.php');
-            }
-        }
+    $status = loginCheck($email, $password);
+
+    if($status){
+        $_SESSION['email'] = $email;
+        $_SESSION['loggedin'] = true;
+        // setcookie('status', 'true', time()+3600, '/');
+        header('location: ../view/userhomepage.php');
+    }else{
         echo "invalid user";
     }
+    
 }
 ?>

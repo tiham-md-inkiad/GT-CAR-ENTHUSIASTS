@@ -12,7 +12,7 @@
 
 <body>
     <div class="registation">
-        <form action="#" method="post"action="../controller/registationuserchack.php">
+        <form method="post" action="../controller/registationuserchack.php">
             <h2>User Registation</h2>
             <div class="input-style">
                 <label for="ID">User id</label>
@@ -27,32 +27,32 @@
                 <label for="email">Email</label>
                 <input type="email" name="email" placeholder="email" id="email" onblur="validateEmail()">
 
-             
+
                 <label for="dob">Date of birth</label>
-                <input type="date" name="dob" value=""id="dob" onblur="validateDob()"/>
+                <input type="date" name="dob" value="" id="dob" onblur="validateDob()" />
             </div>
             <div class="gender">
                 <p>Gender</p>
                 <div class="option">
 
-                    <input type="radio" name="nm" id="gm"required />
-                    <label for="gm">Male</label>
 
-                    <input type="radio" name="nm" id="gf" />
-                    <label for="gf">female</label>
-
-                    <input type="radio" name="nm" id="go" />
-                    <label for="go">others</label>
+                    <input type="radio" id="male" name="gender" value="Male" required />
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female" />
+                    <label for="female">female</label>
+                    <input type="radio" id="other" name="gender" value="Other" /> 
+                    <label for="other">others</label>
                 </div>
 
             </div>
-            
+
 
             <div class="register-page">
-                <input type="submit" value="Register">
+
+                <input type="submit" id="submit" name="submit" value="Register">
                 <input type="submit" id="reset" name="reset" value="Reset" onblur="resetRegistration()">
             </div>
-           
+
             <div class="links"><a href="../view/userlogin.html">Back to userlogin page</a></div>
         </form>
     </div>

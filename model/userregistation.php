@@ -1,12 +1,14 @@
 <?php 
-    require_once(__DIR__.'/../db_conn.php');
+    require_once('../model/database.php');
 
-    function insertUser($user) {
+    function insertUser($users) 
+    {
         $connection = getConnection();
-        $sqlQuery = "INSERT INTO user(Email, Name, Password, Gender, Biography, DOB, Picture, Type) 
-        VALUES ('{$user['email']}','{$user['name']}','{$user['password']}','{$user['gender']}','','{$user['dob']}','','general_subscriber')";
+        $sqlQuery = "insert into users(ID,username,password,email,gender,date_of_birth) 
+        VALUES ('{$users['ID']}','{$users['username']}','{$users['password']}','{$users['email']}','{$users['gender']}','{$users['dob']}')";
 
         $status = mysqli_query($connection, $sqlQuery);
         mysqli_close($connection);
         return $status;
     }
+    

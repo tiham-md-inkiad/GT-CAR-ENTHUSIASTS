@@ -28,13 +28,13 @@
                 <input type="email" name="email" placeholder="email" id="email" onblur="validateEmail()">
 
              
-                <label for="dob">Date of birth:</label>
-                <input type="date" name="dob" value=""id="dob" onblur="validateDob()"/>
+                <label for="date_of_birth">Date of birth:</label>
+                <input type="date" name="date_of_birth" value=""id="date_of_birth" onblur="validateDob()"/>
                 <label for="blogertype">Bloger type</label>  
                 <select name="blogertype" id="blogertype" class="blogertype">
-                    <option value="decoration">Decoration</option>
-                    <option value="bodyparts">Bodyparts</option>
-                    <option value="engineparts">Engineparts</option>
+                    <option name="blogertype" value="decoration">Decoration</option>
+                    <option name="blogertype" value="bodyparts">Bodyparts</option>
+                    <option name="blogertype" value="engineparts">Engineparts</option>
                 </select>
 
             </div>
@@ -56,7 +56,7 @@
             
 
             <div class="register-page">
-                <input type="submit" value="Register">
+                <input type="submit" id="submit" name="submit" value="Register">
                 <input type="submit" id="reset" name="reset" value="Reset" onblur="resetRegistration()">
             </div>
            
